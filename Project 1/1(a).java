@@ -12,13 +12,11 @@ public class Sorter {
         if (end - start <= 0) return;
         else if (end - start <= S)
             insertionSort(inputArray, start, end);
-        else if (end - start > 1) {
+        else {
             // Merge Sort
-            if (end > start) {
-                hybridSort(inputArray, start, mid, S);
-                hybridSort(inputArray, mid + 1, end, S);
-                merge(inputArray, start, end);
-            }
+            hybridSort(inputArray, start, mid, S);
+            hybridSort(inputArray, mid + 1, end, S);
+            merge(inputArray, start, end);
         }
     }
 

@@ -13,6 +13,6 @@ public class GenerateInput {
     }
 
     public static int[] generateRandom(int size, int max) {
-        return new Random().ints(size, 0, max).toArray();
+        return new Random().ints(size, MIN, max + 1).toArray();
     }
 }
